@@ -13,3 +13,18 @@
 /home/hobo/Projet Random/whatever/obj/Debug/net6.0/whatever.pdb
 /home/hobo/Projet Random/whatever/obj/Debug/net6.0/whatever.genruntimeconfig.cache
 /home/hobo/Projet Random/whatever/obj/Debug/net6.0/ref/whatever.dll
+/home/hobo/GitKraken/apr_calculator/whatever/bin/Debug/net6.0/whatever
+/home/hobo/GitKraken/apr_calculator/whatever/bin/Debug/net6.0/whatever.deps.json
+/home/hobo/GitKraken/apr_calculator/whatever/bin/Debug/net6.0/whatever.runtimeconfig.json
+/home/hobo/GitKraken/apr_calculator/whatever/bin/Debug/net6.0/whatever.dll
+/home/hobo/GitKraken/apr_calculator/whatever/bin/Debug/net6.0/whatever.pdb
+/home/hobo/GitKraken/apr_calculator/whatever/obj/Debug/net6.0/whatever.csproj.AssemblyReference.cache
+/home/hobo/GitKraken/apr_calculator/whatever/obj/Debug/net6.0/whatever.GeneratedMSBuildEditorConfig.editorconfig
+/home/hobo/GitKraken/apr_calculator/whatever/obj/Debug/net6.0/whatever.AssemblyInfoInputs.cache
+/home/hobo/GitKraken/apr_calculator/whatever/obj/Debug/net6.0/whatever.AssemblyInfo.cs
+/home/hobo/GitKraken/apr_calculator/whatever/obj/Debug/net6.0/whatever.csproj.CoreCompileInputs.cache
+/home/hobo/GitKraken/apr_calculator/whatever/obj/Debug/net6.0/whatever.dll
+/home/hobo/GitKraken/apr_calculator/whatever/obj/Debug/net6.0/refint/whatever.dll
+/home/hobo/GitKraken/apr_calculator/whatever/obj/Debug/net6.0/whatever.pdb
+/home/hobo/GitKraken/apr_calculator/whatever/obj/Debug/net6.0/whatever.genruntimeconfig.cache
+/home/hobo/GitKraken/apr_calculator/whatever/obj/Debug/net6.0/ref/whatever.dll

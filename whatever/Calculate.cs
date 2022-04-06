@@ -9,6 +9,7 @@ public class Calculate
     public static double MonthlyIncome(UserInfo userInfo)
     {
         return Math.Round((userInfo.deposit * userInfo.apr) / 12,2, MidpointRounding.AwayFromZero);
+        // or Yearly(userInfo) / 12
     }
     public static double DailyIncome(UserInfo userInfo)
     {

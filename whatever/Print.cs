@@ -1,25 +1,26 @@
 using System.Diagnostics;
 using System;
 using System.Security.Cryptography.X509Certificates;
+using static whatever.Calculate;
 
 namespace whatever;
 
 
 public class Print
 {
-    public static void PrintAll(double apr = 0, double unlockRate = 0, double deposit = 0, string step = "",
-        double yearly = 0, double monthly = 0, double daily = 0,double unyear = 0,double unmonth = 0,double unday = 0)
+    public static void PrintAll(UserInfo myUser )
     {
-        string userDeposit = deposit.ToString();
-        string userUnlock = Math.Round((unlockRate * 100),2).ToString();
-        string userApr = Math.Round((apr * 100),2).ToString();
-        string message = step;
-        string year = yearly.ToString();
-        string month = monthly.ToString();
-        string day = daily.ToString();
-        string uYear = unyear.ToString();
-        string uMonth = unmonth.ToString();
-        string uDay = unday.ToString();
+        
+        string userDeposit = myUser.deposit.ToString();
+        string userUnlock = Math.Round((myUser.unlockRate * 100), 2).ToString();
+        string userApr = Math.Round((myUser.apr * 100),2).ToString();
+        string message = "";
+        string year = YearlyIncome(myUser).ToString();
+        string month = MonthlyIncome(myUser).ToString();
+        string day = DailyIncome(myUser).ToString();
+        string uYear = UnlockAmount(myUser,YearlyIncome(myUser)).ToString();
+        string uMonth = UnlockAmount(myUser,MonthlyIncome(myUser)).ToString();
+        string uDay = UnlockAmount(myUser,DailyIncome(myUser)).ToString();
         
         Console.Clear();
         Console.WriteLine($"|-----------------------------------");

@@ -2,57 +2,57 @@ using static whatever.Print;
 
 namespace whatever;
 
-public class UserInfo
+public class AmountInfo
 {
     private double deposit { get; set; }
     private double apr { get; set; }
     private double unlockRate { get; set; }
-    public static void AllInfo(UserInfo myUser)
+    public static void AllInfo(AmountInfo amount)
     {
-        SetDeposit(myUser);
-        SetApr(myUser);
-        SetUnlockRate(myUser);
+        SetDeposit(amount);
+        SetApr(amount);
+        SetUnlockRate(amount);
     }
-    public static void SetDeposit(UserInfo myUser)
+    public static void SetDeposit(AmountInfo amount)
     {
         do
         {
-            PrintAll(myUser);
+            PrintAll(amount);
             Console.Write("ENTER INITIAL DEPOSIT : ");
-            myUser.deposit = double.Parse(Console.ReadLine()); 
-        } while (myUser.deposit == 0 || myUser.deposit < 0);
+            amount.deposit = double.Parse(Console.ReadLine()); 
+        } while (amount.deposit == 0 || amount.deposit < 0);
     }
 
-    public static void SetApr(UserInfo myUser)
+    public static void SetApr(AmountInfo amount)
     {
         do
         {
-            PrintAll(myUser);
+            PrintAll(amount);
             Console.Write("ENTER INITIAL APR : ");
-            myUser.apr = double.Parse(Console.ReadLine()) / 100;
-        } while (myUser.apr == 0 || myUser.apr < 0);
+            amount.apr = double.Parse(Console.ReadLine()) / 100;
+        } while (amount.apr == 0 || amount.apr < 0);
     }
 
-    public static void SetUnlockRate(UserInfo myUser)
+    public static void SetUnlockRate(AmountInfo amount)
     {
         do
         {
-            PrintAll(myUser);
+            PrintAll(amount);
             Console.Write("ENTER INITIAL UNLOCK % : ");
-            myUser.unlockRate = double.Parse(Console.ReadLine()) / 100;
-        } while (myUser.unlockRate == 0 || myUser.unlockRate > 100);
+            amount.unlockRate = double.Parse(Console.ReadLine()) / 100;
+        } while (amount.unlockRate == 0 || amount.unlockRate > 100);
     }
 
-    public static double GetDeposit(UserInfo myUser)
+    public static double GetDeposit(AmountInfo amount)
     {
-        return myUser.deposit;
+        return amount.deposit;
     }
-    public static double GetApr(UserInfo myUser)
+    public static double GetApr(AmountInfo amount)
     {
-        return myUser.apr;
+        return amount.apr;
     }
-    public static double GetUnlockRate(UserInfo myUser)
+    public static double GetUnlockRate(AmountInfo amount)
     {
-        return myUser.unlockRate;
+        return amount.unlockRate;
     }
 }

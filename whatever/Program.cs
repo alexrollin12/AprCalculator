@@ -1,6 +1,6 @@
 ﻿using static whatever.Print;
 using static whatever.Calculate;
-using static whatever.UserInfo;
+using static whatever.AmountInfo;
 
 namespace whatever;
 
@@ -10,12 +10,11 @@ public class Program
     {
         while (true)
         {
-            UserInfo myUser = new UserInfo();
-            AllInfo(myUser);
-            PrintAll(myUser);
-            Console.Write("\nAgain? ");
+            AmountInfo amount = new AmountInfo();
+            AllInfo(amount);
+            PrintAll(amount);
+            Console.Write("Again? ");
             Console.ReadLine();
-
         }
     }
 }

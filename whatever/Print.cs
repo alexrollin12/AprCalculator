@@ -2,6 +2,7 @@ using System.Diagnostics;
 using System;
 using System.Security.Cryptography.X509Certificates;
 using static whatever.Calculate;
+using static whatever.UserInfo;
 
 namespace whatever;
 
@@ -11,10 +12,9 @@ public class Print
     public static void PrintAll(UserInfo myUser )
     {
         
-            string userDeposit = myUser.deposit.ToString();
-            string userUnlock = Math.Round((myUser.unlockRate * 100), 2).ToString();
-            string userApr = Math.Round((myUser.apr * 100), 2).ToString();
-            string message = "";
+            string userDeposit = GetDeposit(myUser).ToString();
+            string userUnlock = Math.Round((GetUnlockRate(myUser) * 100), 2).ToString();
+            string userApr = Math.Round((GetApr(myUser) * 100), 2).ToString();
             string year = YearlyIncome(myUser).ToString();
             string month = MonthlyIncome(myUser).ToString();
             string day = DailyIncome(myUser).ToString();
@@ -36,7 +36,7 @@ public class Print
             Console.WriteLine($"|TOTAL  -> Year:{year}$ Month:{month}$ Day:{day}$  ");
             Console.WriteLine($"|UNLOCK -> Year:{uYear}$ Month:{uMonth}$ Day:{uDay}$  ");
             Console.WriteLine($"|-----------------------------------");
-            Console.Write($"|{message} --> ");
+            Console.Write($"| --> ");
 
     }
 }

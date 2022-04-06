@@ -1,10 +1,12 @@
+using static whatever.UserInfo;
+
 namespace whatever;
 
 public class Calculate
 {
     public static double YearlyIncome(UserInfo userInfo)
     {
-        return Math.Round(userInfo.deposit * userInfo.apr,2, MidpointRounding.AwayFromZero);
+        return Math.Round(GetDeposit(userInfo) * GetApr(userInfo),2, MidpointRounding.AwayFromZero);
     }
     public static double MonthlyIncome(UserInfo userInfo)
     {
@@ -16,6 +18,6 @@ public class Calculate
     }
     public static double UnlockAmount(UserInfo userInfo, double income)
     {
-        return Math.Round(income * userInfo.unlockRate,2) ;
+        return Math.Round(income * GetUnlockRate(userInfo),2) ;
     }
 }

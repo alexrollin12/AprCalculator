@@ -1,6 +1,6 @@
-﻿using static whatever.GetInfo;
-using static whatever.Print;
+﻿using static whatever.Print;
 using static whatever.Calculate;
+using static whatever.UserInfo;
 
 namespace whatever;
 
@@ -13,7 +13,7 @@ public class Program
             UserInfo myUser = new UserInfo();
             AllInfo(myUser);
             PrintAll(myUser);
-            Console.WriteLine("Again?");
+            Console.Write("\nAgain? ");
             Console.ReadLine();
 
         }

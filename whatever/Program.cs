@@ -13,11 +13,9 @@ public class Program
             UserInfo myUser = new UserInfo();
             AllInfo(myUser);
             PrintAll(myUser);
-            
+            Console.WriteLine("Again?");
+            Console.ReadLine();
+
         }
-            
-            
-
-
     }
 }

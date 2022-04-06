@@ -12,9 +12,12 @@ public class GetInfo
     }
     public static void GetDeposit(UserInfo myUser)
     {
-        PrintAll(myUser);
+        do
+        {
+            PrintAll(myUser);
             Console.Write("ENTER INITIAL DEPOSIT : ");
-            myUser.deposit = double.Parse(Console.ReadLine());
+            myUser.deposit = double.Parse(Console.ReadLine()); 
+        } while (myUser.deposit == 0 || myUser.deposit < 0);
     }
 
     public static void GetApr(UserInfo myUser)
@@ -24,7 +27,7 @@ public class GetInfo
             PrintAll(myUser);
             Console.Write("ENTER INITIAL APR : ");
             myUser.apr = double.Parse(Console.ReadLine()) / 100;
-        } while (myUser.apr == 0);
+        } while (myUser.apr == 0 || myUser.apr < 0);
     }
 
     public static void GetUnlockRate(UserInfo myUser)
@@ -34,6 +37,6 @@ public class GetInfo
             PrintAll(myUser);
             Console.Write("ENTER INITIAL UNLOCK % : ");
             myUser.unlockRate = double.Parse(Console.ReadLine()) / 100;
-        } while (myUser.unlockRate == 0);
+        } while (myUser.unlockRate == 0 || myUser.unlockRate > 100);
     }
 }

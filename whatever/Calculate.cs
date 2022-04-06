@@ -8,14 +8,12 @@ public class Calculate
     }
     public static double MonthlyIncome(UserInfo userInfo)
     {
-        return Math.Round((userInfo.deposit * userInfo.apr) / 12,2, MidpointRounding.AwayFromZero);
-        // or Yearly(userInfo) / 12
+        return Math.Round(YearlyIncome(userInfo) / 12,2, MidpointRounding.AwayFromZero);
     }
     public static double DailyIncome(UserInfo userInfo)
     {
-        return Math.Round((userInfo.deposit * userInfo.apr) / 365,2, MidpointRounding.AwayFromZero);
+        return Math.Round(YearlyIncome(userInfo) / 365,2, MidpointRounding.AwayFromZero);
     }
-
     public static double UnlockAmount(UserInfo userInfo, double income)
     {
         return Math.Round(income * userInfo.unlockRate,2) ;

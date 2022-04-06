@@ -20,7 +20,7 @@ public class AmountInfo
             PrintAll(amount);
             Console.Write("ENTER INITIAL DEPOSIT : ");
             amount.deposit = double.Parse(Console.ReadLine()); 
-        } while (amount.deposit == 0 || amount.deposit < 0);
+        } while (amount.deposit <= 0);
     }
 
     public static void SetApr(AmountInfo amount)
@@ -30,7 +30,7 @@ public class AmountInfo
             PrintAll(amount);
             Console.Write("ENTER INITIAL APR : ");
             amount.apr = double.Parse(Console.ReadLine()) / 100;
-        } while (amount.apr == 0 || amount.apr < 0);
+        } while (amount.apr <= 0);
     }
 
     public static void SetUnlockRate(AmountInfo amount)
@@ -40,7 +40,7 @@ public class AmountInfo
             PrintAll(amount);
             Console.Write("ENTER INITIAL UNLOCK % : ");
             amount.unlockRate = double.Parse(Console.ReadLine()) / 100;
-        } while (amount.unlockRate == 0 || amount.unlockRate > 100);
+        } while (amount.unlockRate <= 0 || amount.unlockRate > 100);
     }
 
     public static double GetDeposit(AmountInfo amount)

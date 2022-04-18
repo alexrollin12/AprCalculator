@@ -55,4 +55,5 @@ public class AmountInfo
     {
         return amount.unlockRate;
     }
+    
 }

@@ -11,7 +11,10 @@ public class Print
 {
     public static void PrintAll(AmountInfo amount )
     {
+
         
+        
+            //36
             string amountDeposit = GetDeposit(amount).ToString();
             string amountUnlock = Math.Round((GetUnlockRate(amount) * 100), 2).ToString();
             string amountApr = Math.Round((GetApr(amount) * 100), 2).ToString();
@@ -37,6 +40,13 @@ public class Print
             Console.WriteLine($"|UNLOCK -> Year:{uYear}$ Month:{uMonth}$ Day:{uDay}$  ");
             Console.WriteLine($"|-----------------------------------");
             Console.Write($"| --> ");
+        
+    }
 
+    public static string PadBoth(string myStr, int length)
+    {
+        int spaces = length - myStr.Length;
+        int padLeft = spaces / 2 + myStr.Length;
+        return myStr.PadLeft(padLeft).PadRight(length);
     }
 }
